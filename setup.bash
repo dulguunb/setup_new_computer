@@ -25,6 +25,8 @@ configure_vim() {
     git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 }
 configure_plugins_vim(){
+    # source first
+    source ~/.bashrc || source ~/.bash_profile' or 'source ~/.zshrc
     # neeerd treeeeeeeeeee
     apt-vim install -y https://github.com/scrooloose/nerdtree.git
 }
