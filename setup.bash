@@ -1,9 +1,8 @@
 #!/bin/bash
 
 setup_ubuntu () {
-    # using old aliases because 
-    # I might install old version of Ubuntu that
-    # doesn't use "apt" alias
+    echo "[0] updating submodules"
+    git submodule update --init --recursive
     echo "[1] Installing runtime packages"
     install_essential_runtime_packages_ubuntu
     echo "[2] copying my beloved backup settings <3"
@@ -14,9 +13,14 @@ setup_ubuntu () {
     configure_plugins_vim
 }
 copy_settings() {
-    cp .zshrc ~/.zshrc
+    echo "\t copying bashrc settings"
+    cp oh-my-bash/templates/bashrc.osh-template ~/.bashrc
+    echo "\t copying vimrc settings"
     cp .vimrc ~/.vimrc
+    echo "\t creating directory ~/.vim for plugins"
     mkdir ~/.vim
+    echo "\t copying tmux settings"
+    cp .tmux/.tmux.conf ~/.tmux.conf
 }
 configure_vim() {
     # vim package installer <3
