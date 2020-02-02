@@ -1,9 +1,6 @@
-[submodule "tmux-settings"]
-    path = tmux
-    url = git@github.com:dulguunb/.tmux.git
-[submodule "bash-settings"]
-    path = bash
-    url = git@github.com:dulguunb/oh-my-bash.git
-[submodule ".zsh-settings"]
-    path = bash
-    url = git@github.com:dulguunb/oh-my-bash.git
+[submodule ".tmux"]
+	path = .tmux
+	url = git@github.com:dulguunb/.tmux.git
+[submodule "oh-my-bash"]
+	path = oh-my-bash
+	url = git@github.com:dulguunb/oh-my-bash.git
